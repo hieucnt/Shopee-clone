@@ -412,6 +412,7 @@
   box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
   display: none;
   animation: fadeIn ease-in 0.2s;
+  cursor: default;
 }
 
 .header__cart-list::after{
@@ -422,19 +423,40 @@
   position: absolute;
   right: 2px;
   top: -23px;
+  cursor: pointer;
+}
+
+.header__cart-notice{
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  padding: 2px 7px;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  border-radius: 10px;
+  border: 2px solid #EE4D2D;
 }
 
 .header__cart-list--no-cart{
   padding: 24px 0;
-
+}
+.header__cart-list---no-cart .header__cart-list-no-cart-msg,
+.header__cart-list---no-cart .header__cart-list--no-cart-img
+ {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header__cart-list--no-cart-img{
   width: 54%;
+  display: none;
 }
 
 .header__cart-list-no-cart-msg{
-  display: block;
+  display: none;
   font-size: 1.4rem;
   margin: 14px 0;
   color: var(--text-color);
