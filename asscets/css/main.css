@@ -992,7 +992,7 @@ max-height: 56vh;
 
 .home-product-item__price{
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
 }
 
