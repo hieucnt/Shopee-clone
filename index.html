@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./asscets/css/base.css">
   <link rel="stylesheet" href="./asscets/css/main.css">
   <link rel="stylesheet" href="./asscets/css/grid.css">
+  <link rel="stylesheet" href="./asscets/css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
   <div class="app">
     <header class="header">
       <div class="grid wide">
-        <nav class="header__navbar">
+        <nav class="header__navbar hide-on-mobile-tablet">
           <ul class="header__navbar-list">
             <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">Vào cửa hàng trên ứng dụng
               <!-- Header QR Code -->
@@ -145,7 +146,10 @@
         </nav>
         <!-- Header with search -->
         <div class="header-with-search">
-          <div class="header__logo">
+          <label for="mobile-search-checkbox" class="header__mobile-search">
+            <i class="header__mobile-search-icon fas fa-search"></i>
+          </label>
+          <div class="header__logo hide-on-tablet">
             <a href="/" class="header__logo-link">
               <svg viewBox="0 0 192 65" class="header__logo-img">
                 <g fill-rule="evenodd">
@@ -157,6 +161,8 @@
               </svg>
             </a>
           </div>
+
+          <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
           <div class="header__search">
             <div class="header__search-input-wrap">
@@ -204,7 +210,7 @@
               <i class="header__cart-icon fas fa-shopping-cart"></i>
               <span class="header__cart-notice">3</span>
               <!-- No cart: add class header__cart-list---no-cart -->
-              <div class="header__cart-list ">
+              <div class="header__cart-list">
                 <img src="./asscets/img/no-cart.png" alt="" class="header__cart-list--no-cart-img">
                 <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
 
@@ -282,92 +288,33 @@
                       </div>
                     </div>
                   </li>
-
-                  <li class="header__cart-item">
-                    <img src="https://cf.shopee.vn/file/f04ef063d8fd26ef8d9efa40e1254f93_tn" alt="" class="header__cart-img">
-                    <div class="header__cart-item-info">
-                      <div class="header__cart-item-head">
-                        <h5 class="header__cart-item-name">[Mã 1010LIFESALE1 giảm 10% đơn 50K] Mũ Bảo Hiểm Nửa Đầu 1/2 Nhiều Tem Siêu HOT - Hàng Cao Cấp</h5>
-                        <div class="header__cart-item-price-wrap">
-                          <span class="header__cart-item-price">70.000đ</span>
-                          <span class="header__cart-item-multiply">x</span>
-                          <span class="header__cart-item-quantity">1</span>
-                        </div>
-                      </div>
-                      <div class="header__cart-item-body">
-                        <span class="header__cart-item-des">Phân loại: Đỏ</span>
-                        <div class="header__cart-item-remove">Xóa</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="header__cart-item">
-                    <img src="https://cf.shopee.vn/file/f04ef063d8fd26ef8d9efa40e1254f93_tn" alt="" class="header__cart-img">
-                    <div class="header__cart-item-info">
-                      <div class="header__cart-item-head">
-                        <h5 class="header__cart-item-name">[Mã 1010LIFESALE1 giảm 10% đơn 50K] Mũ Bảo Hiểm Nửa Đầu 1/2 Nhiều Tem Siêu HOT - Hàng Cao Cấp</h5>
-                        <div class="header__cart-item-price-wrap">
-                          <span class="header__cart-item-price">70.000đ</span>
-                          <span class="header__cart-item-multiply">x</span>
-                          <span class="header__cart-item-quantity">1</span>
-                        </div>
-                      </div>
-                      <div class="header__cart-item-body">
-                        <span class="header__cart-item-des">Phân loại: Đỏ</span>
-                        <div class="header__cart-item-remove">Xóa</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="header__cart-item">
-                    <img src="https://cf.shopee.vn/file/f04ef063d8fd26ef8d9efa40e1254f93_tn" alt="" class="header__cart-img">
-                    <div class="header__cart-item-info">
-                      <div class="header__cart-item-head">
-                        <h5 class="header__cart-item-name">[Mã 1010LIFESALE1 giảm 10% đơn 50K] Mũ Bảo Hiểm Nửa Đầu 1/2 Nhiều Tem Siêu HOT - Hàng Cao Cấp</h5>
-                        <div class="header__cart-item-price-wrap">
-                          <span class="header__cart-item-price">70.000đ</span>
-                          <span class="header__cart-item-multiply">x</span>
-                          <span class="header__cart-item-quantity">1</span>
-                        </div>
-                      </div>
-                      <div class="header__cart-item-body">
-                        <span class="header__cart-item-des">Phân loại: Đỏ</span>
-                        <div class="header__cart-item-remove">Xóa</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="header__cart-item">
-                    <img src="https://cf.shopee.vn/file/f04ef063d8fd26ef8d9efa40e1254f93_tn" alt="" class="header__cart-img">
-                    <div class="header__cart-item-info">
-                      <div class="header__cart-item-head">
-                        <h5 class="header__cart-item-name">[Mã 1010LIFESALE1 giảm 10% đơn 50K] Mũ Bảo Hiểm Nửa Đầu 1/2 Nhiều Tem Siêu HOT - Hàng Cao Cấp</h5>
-                        <div class="header__cart-item-price-wrap">
-                          <span class="header__cart-item-price">70.000đ</span>
-                          <span class="header__cart-item-multiply">x</span>
-                          <span class="header__cart-item-quantity">1</span>
-                        </div>
-                      </div>
-                      <div class="header__cart-item-body">
-                        <span class="header__cart-item-des">Phân loại: Đỏ</span>
-                        <div class="header__cart-item-remove">Xóa</div>
-                      </div>
-                    </div>
-                  </li>
                 </ul>
-
                 <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ul class="header__sort-bar">
+        <li class="header__sort-item">
+          <a href="" class="header__sort-link">Liên quan</a>
+        </li>
+        <li class="header__sort-item header__sort-item--active">
+          <a href="" class="header__sort-link">Mới nhất</a>
+        </li>
+        <li class="header__sort-item">
+          <a href="" class="header__sort-link">Bán chạy</a>
+        </li>
+        <li class="header__sort-item">
+          <a href="" class="header__sort-link">Giá</a>
+        </li>
+      </ul>
     </header>
 
     <div class="app__container">
       <div class="grid wide">
-        <div class="grid__row app-content">
-          <div class="grid__column-2">
+        <div class="row sm-gutter app-content">
+          <div class="col l-2 m-0 c-0">
             <nav class="category">
               <h3 class="category-heading">DANH MỤC SHOP</h3>
               <ul class="category-list">
@@ -405,8 +352,8 @@
               </ul>
             </nav>
           </div>
-          <div class="grid__column-10">
-            <div class="home-filter">
+          <div class="col l-10 m-12 c-12">
+            <div class="home-filter hide-on-mobile-tablet">
               <span class="home-filter__label">Sắp xếp theo</span>
               <button class="home-filter__btn btn">Phổ biến</button>
               <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -441,9 +388,57 @@
               </div>
             </div>
 
+            <!-- Category Mobile -->
+            <nav class="mobile-category">
+              <ul class="mobile-category__list">
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Cáp sạc, củ sạc điện thoại</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Tai nghe, jack chuyển</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Cường lực, ốp, case, sim ghép</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Pin điện thoại, sạc dự phòng</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Loa, Micro</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Phụ kiện Anker</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Ravpower</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Cáp sạc, củ sạc điện thoại</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Tai nghe, jack chuyển</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Cường lực, ốp, case, sim ghép</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Pin điện thoại, sạc dự phòng</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Loa, Micro</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Phụ kiện Anker</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Ravpower</a>
+                </li>
+              </ul>
+            </nav>
+
             <div class="home-product">
-              <div class="grid__row">
-                <div class="grid__column-2-4">
+              <div class="row sm-gutter">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/db0c34a6c29afad06a0e34d840910f8e_tn);">
@@ -481,7 +476,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/636cae243dacb88c67e2c19d5b7e8102_tn);">
@@ -518,7 +513,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1293cb0e37c5b61d23af69d895bbcffb_tn);">
@@ -555,7 +550,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/e9353ed629a2579eee1efea4d222c353_tn);">
@@ -592,7 +587,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/738aa81d92eeeac09cdea6b4a5a157bc_tn);">
@@ -629,11 +624,7 @@
                     </div>
                   </a>
                 </div>
-
-              </div>
-
-              <div class="grid__row">
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/af4d11820cafd7e4bab2ac08e7be1c1d_tn);">
@@ -671,7 +662,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/270dcd66c42ff590322a58bc63907eb9_tn);">
@@ -703,7 +694,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/59f9788decd1f15e5854a2a3dad6a1e0_tn);">
@@ -741,7 +732,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/577d7dc55b4605d84ad528f14415f0b3_tn);">
@@ -779,7 +770,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4 m-4 c-6">
                   <!-- product item -->
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/b86d3bda5763ffac279f1793f20e2443_tn);">
@@ -819,7 +810,6 @@
                 </div>
               </div>
             </div>
-
             <ul class="pagination pagination__home-product">
               <li class="pagination-item">
                 <a href="" class="pagination-item__link">
@@ -867,9 +857,9 @@
     </div>
 
     <footer class="footer">
-      <div class="grid wide">
-        <div class="grid__row">
-          <div class="grid__column-2-4">
+      <div class="grid wide footer__content">
+        <div class="row sm-gutter">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
             <ul class="footer-list">
               <li class="footer-list__item">
@@ -889,7 +879,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-2-4">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">GIỚI THIỆU</h3>
             <ul class="footer-list">
               <li class="footer-list__item">
@@ -909,7 +899,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-2-4">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">DANH MỤC</h3>
             <ul class="footer-list">
               <li class="footer-list__item">
@@ -929,7 +919,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-2-4">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">THEO DÕI</h3>
             <ul class="footer-list">
               <li class="footer-list__item">
@@ -952,13 +942,15 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-2-4">
+          <div class="col l-2-4 m-8 c-12">
             <h3 class="footer__heading">VÀO CỬA HÀNG TRÊN ỨNG DỤNG</h3>
             <div class="footer__download">
               <img src="./asscets/img/qrcode.png" alt="QR Download" class="footer__download-qr">
               <div class="footer__download-apps">
                 <a href="" class="footer__download-apps-link">
                   <img src="./asscets/img/googleplay.png" alt="Google Play" class="footer__download-apps-img">
+                </a>
+                <a href="" class="footer__download-apps-link">
                   <img src="./asscets/img/appstore.png" alt="Appstore" class="footer__download-apps-img">
                 </a>
               </div>
